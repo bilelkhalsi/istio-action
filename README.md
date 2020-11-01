@@ -1,6 +1,6 @@
 # *Istio* Action
 
-[![](https://github.com/bilelkhalsi/istio-action/workflows/Test/badge.svg?branch=master)](https://github.com/bilelkhalsi/istio-action/actions)
+[![](https://github.com/bilelkhalsi/istio-action/workflows/TestIstioInstall/badge.svg?branch=master)](https://github.com/bilelkhalsi/istio-action/actions)
 
 A GitHub Action to install [Istio](https://istio.io/) on Kubernetes cluster.
 
