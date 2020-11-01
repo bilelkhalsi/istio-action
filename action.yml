@@ -1,0 +1,17 @@
+name: "Istio"
+description: "Install Istio on Kubernetes cluster"
+author: "bilel_khalsi@live.fr"
+branding:
+  color: blue
+  icon: box
+inputs:
+  version:
+    description: "The Istio version to use (default: 1.7.4)"
+  profile:
+    description: "The Istio profile to use (default: 'default')"  
+  wait:
+    description: "The duration to wait for the Istio RCD's to become ready (default: 60s)"
+runs:
+  using: "node12"
+  main: "main.js"
+  post: "cleanup.js"
