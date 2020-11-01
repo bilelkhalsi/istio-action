@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-
 set -o errexit
 set -o nounset
 set -o pipefail
@@ -77,7 +76,7 @@ parse_command_line() {
     done
 }
 
-donwload_istio() {
+download_istio() {
     echo 'Installing istio...'
     curl -L https://istio.io/downloadIstio | ISTIO_VERSION=$version TARGET_ARCH=x86_64 sh -
     cd "istio-$version"

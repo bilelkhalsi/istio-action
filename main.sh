@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 set -o errexit
 set -o nounset
 set -o pipefail
@@ -19,6 +21,8 @@ main() {
         args+=(--wait "${INPUT_WAIT}")
     fi
 
+    chmod +x "$SCRIPT_DIR/install.sh"
+    
     "$SCRIPT_DIR/install.sh" "${args[@]}"
 }
 
