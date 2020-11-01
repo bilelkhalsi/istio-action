@@ -1,0 +1,26 @@
+name: Test Istio Install
+
+on:
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+
+  test-with-default-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v1
+
+      - name: Create KinD cluster
+        uses: helm/kind-action@v1.0.0
+
+      - name: Install Istio
+        uses: ./
+
+      - name: check Istio CRD's installed and ready
+        run: |
+          kubectl -n istio-system wait pods --selector=app=istio-ingressgateway --for=condition=Ready
+      

@@ -6,7 +6,6 @@ set -o pipefail
 
 main() {
     kubectl delete ns istio-system
-    kubectl delete ns istio-operator
 }
 
 main
