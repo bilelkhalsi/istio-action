@@ -35,7 +35,7 @@ jobs:
       - name: Create k8s Kind Cluster
         uses: helm/kind-action@v1.0.0
       - name: Install Istio
-        uses: bilelkhalsi/istio-action@v1.0.0      
+        uses: bilelkhalsi/istio-action@v0.1.0      
 ```
 
 This uses [@bilelkhalsi/istio-action](https://www.github.com/bilelkhalsi/istio-action) GitHub Action to spin up a [kind](https://kind.sigs.k8s.io/) Kubernetes cluster with [Istion](https://istio.io/) installed on every Pull Request.
